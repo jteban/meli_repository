@@ -1,14 +1,14 @@
-#Mutant Detection API
+# Mutant Detection API
 Este proyecto permite determinar si una persona es un humano o un mutante a partir de su ADN. El ADN se recibe como un parámetro en formato de matriz de cadenas, y se analiza para verificar si cumple con los patrones característicos de un mutante.
 
-#Descripción general
+# Descripción general
 El sistema recibe un ADN en formato de matriz y responde con un código de estado HTTP:
 
 200 si la persona es un mutante.
 403 si la persona es un humano.
 El sistema también ofrece estadísticas sobre el número de humanos y mutantes en la base de datos.
 
-#Tecnologías utilizadas
+# Tecnologías utilizadas
 Java 17
 Spring Boot
 Maven
