@@ -21,15 +21,16 @@ Java 17: Descargar Java 17
 Maven: Descargar Maven
 Postman (opcional, para probar la API): Descargar Postman
 Configuración y ejecución del proyecto
-Clonar el repositorio
+
+# Clonar el repositorio
 
 Clona el repositorio de GitHub a tu máquina local:
 
-bash
 Copiar código
 git clone https://github.com/jteban/meli_repository.git
 cd repo
-Configuración de variables de entorno
+
+# Configuración de variables de entorno
 
 Este proyecto utiliza una base de datos de PostgreSQL alojada en Railway. Las credenciales de la base de datos están almacenadas en el archivo .env llamado meli_prueba.env.
 
@@ -40,11 +41,11 @@ Copiar código
 DB_URL=jdbc:postgresql://<tu_db_url>:<puerto>/<nombre_db>
 DB_USERNAME=<tu_usuario>
 DB_PASSWORD=<tu_contraseña>
-Compilar y ejecutar el proyecto
+
+# Compilar y ejecutar el proyecto
 
 Asegúrate de tener las dependencias necesarias con Maven y ejecuta el proyecto:
 
-bash
 Copiar código
 mvn clean install
 mvn spring-boot:run
