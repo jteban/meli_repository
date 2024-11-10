@@ -28,7 +28,6 @@ Clona el repositorio de GitHub a tu máquina local:
 
 Copiar código
 git clone https://github.com/jteban/meli_repository.git
-cd repo
 
 # Configuración de variables de entorno
 
