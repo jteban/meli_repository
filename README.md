@@ -14,7 +14,7 @@ Spring Boot
 Maven
 PostgreSQL (base de datos alojada en Railway)
 Postman (para probar la API)
-#Requisitos previos
+# Requisitos previos
 Antes de ejecutar este proyecto, asegúrate de tener instalados los siguientes programas:
 
 Java 17: Descargar Java 17
@@ -50,7 +50,7 @@ mvn clean install
 mvn spring-boot:run
 El servidor debería iniciarse en http://localhost:8080.
 
-Endpoints de la API
+# Endpoints de la API
 1. POST /meli/mutant/
    Este endpoint permite determinar si un ADN corresponde a un mutante o a un humano.
 
@@ -86,7 +86,7 @@ Copiar código
 "count_mutant_dna": 3,
 "ratio": 3.0
 }
-Uso de Postman
+# Uso de Postman
 He preparado una colección de Postman con ejemplos de cómo interactuar con la API. Puedes encontrarla en el repositorio de GitHub.
 
 Importar la colección en Postman:
@@ -95,7 +95,7 @@ Importa el archivo a Postman y ejecuta las solicitudes de ejemplo.
 Pruebas
 Para realizar pruebas manuales de la API, puedes usar Postman con los ejemplos de solicitudes que he proporcionado. Los resultados de las pruebas dependerán de los datos almacenados en la base de datos de PostgreSQL.
 
-Variables de entorno
+# Variables de entorno
 Asegúrate de definir las siguientes variables en tu archivo .env:
 
 DB_URL: URL de conexión a la base de datos PostgreSQL.
