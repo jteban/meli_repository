@@ -27,7 +27,7 @@ Clona el repositorio de GitHub a tu máquina local:
 
 bash
 Copiar código
-git clone https://github.com/usuario/repo.git
+git clone https://github.com/jteban/meli_repository.git
 cd repo
 Configuración de variables de entorno
 
