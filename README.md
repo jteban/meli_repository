@@ -25,7 +25,6 @@ Clonar el repositorio
 
 Clona el repositorio de GitHub a tu máquina local:
 
-bash
 Copiar código
 git clone https://github.com/jteban/meli_repository.git
 cd repo
@@ -34,7 +33,8 @@ Configuración de variables de entorno
 Este proyecto utiliza una base de datos de PostgreSQL alojada en Railway. Las credenciales de la base de datos están almacenadas en el archivo .env llamado meli_prueba.env.
 
 Crea un archivo .env en la raíz del proyecto y agrega las variables de entorno que proporciono en el archivo meli_prueba.env:
-bash
+
+
 Copiar código
 # Contenido del archivo meli_prueba.env (ejemplo)
 DB_URL=jdbc:postgresql://<tu_db_url>:<puerto>/<nombre_db>
@@ -44,7 +44,6 @@ Compilar y ejecutar el proyecto
 
 Asegúrate de tener las dependencias necesarias con Maven y ejecuta el proyecto:
 
-bash
 Copiar código
 mvn clean install
 mvn spring-boot:run
