@@ -29,6 +29,8 @@ Clona el repositorio de GitHub a tu máquina local:
 Copiar código
 git clone https://github.com/jteban/meli_repository.git
 
+la rama donde se ecuentra el código es: feat/meli_prueba
+
 # Configuración de variables de entorno
 
 Este proyecto utiliza una base de datos de PostgreSQL alojada en Railway. Las credenciales de la base de datos están almacenadas en el archivo .env llamado meli_prueba.env.
