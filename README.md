@@ -37,18 +37,14 @@ Este proyecto utiliza una base de datos de PostgreSQL alojada en Railway. Las cr
 
 Crea un archivo .env en la raíz del proyecto y agrega las variables de entorno que proporciono en el archivo meli_prueba.env:
 
-
-Copiar código
 # Contenido del archivo meli_prueba.env (ejemplo)
 DB_URL=jdbc:postgresql://<tu_db_url>:<puerto>/<nombre_db>
 DB_USERNAME=<tu_usuario>
 DB_PASSWORD=<tu_contraseña>
 
 # Compilar y ejecutar el proyecto
-
 Asegúrate de tener las dependencias necesarias con Maven y ejecuta el proyecto:
 
-Copiar código
 mvn clean install
 mvn spring-boot:run
 El servidor debería iniciarse en http://localhost:8080.
@@ -95,7 +91,8 @@ He preparado una colección de Postman con ejemplos de cómo interactuar con la 
 Importar la colección en Postman:
 Descarga el archivo Meli.postman_collection.json desde el repositorio.
 Importa el archivo a Postman y ejecuta las solicitudes de ejemplo.
-Pruebas
+
+# Pruebas
 Para realizar pruebas manuales de la API, puedes usar Postman con los ejemplos de solicitudes que he proporcionado. Los resultados de las pruebas dependerán de los datos almacenados en la base de datos de PostgreSQL.
 
 # Variables de entorno
