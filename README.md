@@ -54,9 +54,8 @@ El servidor debería iniciarse en http://localhost:8080.
    Este endpoint permite determinar si un ADN corresponde a un mutante o a un humano.
 
 Ejemplo de solicitud:
-json
-Copiar código
-POST http://localhost:8080/meli/mutant/
+
+http://localhost:8080/meli/mutant/
 {
 "dna": [
 "ATGCGT",
@@ -74,12 +73,9 @@ Respuestas:
    Este endpoint devuelve estadísticas sobre el número de humanos y mutantes en la base de datos.
 
 Ejemplo de solicitud:
-http
-Copiar código
+
 GET http://localhost:8080/meli/stats
 Respuesta:
-json
-Copiar código
 {
 "count_human_dna": 1,
 "count_mutant_dna": 3,
