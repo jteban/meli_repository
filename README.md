@@ -28,7 +28,8 @@ Clona el repositorio de GitHub a tu máquina local:
 
 Copiar código
 git clone https://github.com/jteban/meli_repository.git
-cd repo
+
+la rama donde se ecuentra el código es: feat/meli_prueba
 
 # Configuración de variables de entorno
 
@@ -36,18 +37,14 @@ Este proyecto utiliza una base de datos de PostgreSQL alojada en Railway. Las cr
 
 Crea un archivo .env en la raíz del proyecto y agrega las variables de entorno que proporciono en el archivo meli_prueba.env:
 
-
-Copiar código
 # Contenido del archivo meli_prueba.env (ejemplo)
 DB_URL=jdbc:postgresql://<tu_db_url>:<puerto>/<nombre_db>
 DB_USERNAME=<tu_usuario>
 DB_PASSWORD=<tu_contraseña>
 
 # Compilar y ejecutar el proyecto
-
 Asegúrate de tener las dependencias necesarias con Maven y ejecuta el proyecto:
 
-Copiar código
 mvn clean install
 mvn spring-boot:run
 El servidor debería iniciarse en http://localhost:8080.
@@ -57,9 +54,8 @@ El servidor debería iniciarse en http://localhost:8080.
    Este endpoint permite determinar si un ADN corresponde a un mutante o a un humano.
 
 Ejemplo de solicitud:
-json
-Copiar código
-POST http://localhost:8080/meli/mutant/
+
+http://localhost:8080/meli/mutant/
 {
 "dna": [
 "ATGCGT",
@@ -77,12 +73,9 @@ Respuestas:
    Este endpoint devuelve estadísticas sobre el número de humanos y mutantes en la base de datos.
 
 Ejemplo de solicitud:
-http
-Copiar código
+
 GET http://localhost:8080/meli/stats
 Respuesta:
-json
-Copiar código
 {
 "count_human_dna": 1,
 "count_mutant_dna": 3,
@@ -94,7 +87,8 @@ He preparado una colección de Postman con ejemplos de cómo interactuar con la 
 Importar la colección en Postman:
 Descarga el archivo Meli.postman_collection.json desde el repositorio.
 Importa el archivo a Postman y ejecuta las solicitudes de ejemplo.
-Pruebas
+
+# Pruebas
 Para realizar pruebas manuales de la API, puedes usar Postman con los ejemplos de solicitudes que he proporcionado. Los resultados de las pruebas dependerán de los datos almacenados en la base de datos de PostgreSQL.
 
 # Variables de entorno
