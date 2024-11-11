@@ -12,15 +12,38 @@ El sistema también ofrece estadísticas sobre el número de humanos y mutantes 
 Java 17
 Spring Boot
 Maven
+Cloud computing para despliegue de la api: Railway
 PostgreSQL (base de datos alojada en Railway)
 Postman (para probar la API)
-# Requisitos previos
-Antes de ejecutar este proyecto, asegúrate de tener instalados los siguientes programas:
+
+
+# URLS Para probar proyecto:
+endpoint "/mutant/":
+POST https://melirepository-production.up.railway.app/meli/mutant/
+ejemplo de request (JSON):
+{
+    "dna": [
+        "ATGCGA",
+        "CAGTGC",
+        "TTATGT",
+        "TTATGT",
+        "CAGTGC",
+        "ATGCGA"
+    ]
+}
+
+endpoint "/stats"
+GET https://melirepository-production.up.railway.app/meli/stats
+
+
+# LOCAL Requisitos previos
+Antes de ejecutar este proyecto a nivel local, asegúrate de tener instalados los siguientes programas:
 
 Java 17: Descargar Java 17
 Maven: Descargar Maven
 Postman (opcional, para probar la API): Descargar Postman
-Configuración y ejecución del proyecto
+
+# Configuración y ejecución del proyecto LOCAL
 
 # Clonar el repositorio
 
@@ -28,15 +51,14 @@ Clona el repositorio de GitHub a tu máquina local:
 
 Copiar código
 git clone https://github.com/jteban/meli_repository.git
-cd repo
+la rama que contiene el proyecto es: feat/meli_prueba
 
 # Configuración de variables de entorno
 
 Este proyecto utiliza una base de datos de PostgreSQL alojada en Railway. Las credenciales de la base de datos están almacenadas en el archivo .env llamado meli_prueba.env.
 
 Crea un archivo .env en la raíz del proyecto y agrega las variables de entorno que proporciono en el archivo meli_prueba.env:
-bash
-Copiar código
+
 # Contenido del archivo meli_prueba.env (ejemplo)
 DB_URL=jdbc:postgresql://<tu_db_url>:<puerto>/<nombre_db>
 DB_USERNAME=<tu_usuario>
@@ -46,7 +68,6 @@ DB_PASSWORD=<tu_contraseña>
 
 Asegúrate de tener las dependencias necesarias con Maven y ejecuta el proyecto:
 
-Copiar código
 mvn clean install
 mvn spring-boot:run
 El servidor debería iniciarse en http://localhost:8080.
@@ -56,8 +77,9 @@ El servidor debería iniciarse en http://localhost:8080.
    Este endpoint permite determinar si un ADN corresponde a un mutante o a un humano.
 
 Ejemplo de solicitud:
-json
-Copiar código
+Para probar el endpoint "/mutant/" se debe usar la url:
+POST https://melirepository-production.up.railway.app/meli/mutant/
+A nivel local puedes usar esta url:
 POST http://localhost:8080/meli/mutant/
 {
 "dna": [
@@ -72,21 +94,25 @@ POST http://localhost:8080/meli/mutant/
 Respuestas:
 200 OK: Si el ADN corresponde a un mutante.
 403 Forbidden: Si el ADN corresponde a un humano.
+
 2. GET /meli/stats
    Este endpoint devuelve estadísticas sobre el número de humanos y mutantes en la base de datos.
 
 Ejemplo de solicitud:
-http
-Copiar código
+
+Para probar el endpoint "/stats" se debe usar la url:
+GET https://melirepository-production.up.railway.app/meli/stats
+
+A nivel local puedes usar esta url:
 GET http://localhost:8080/meli/stats
 Respuesta:
-json
-Copiar código
+
 {
 "count_human_dna": 1,
 "count_mutant_dna": 3,
 "ratio": 3.0
 }
+
 # Uso de Postman
 He preparado una colección de Postman con ejemplos de cómo interactuar con la API. Puedes encontrarla en el repositorio de GitHub.
 
@@ -97,7 +123,7 @@ Pruebas
 Para realizar pruebas manuales de la API, puedes usar Postman con los ejemplos de solicitudes que he proporcionado. Los resultados de las pruebas dependerán de los datos almacenados en la base de datos de PostgreSQL.
 
 # Variables de entorno
-Asegúrate de definir las siguientes variables en tu archivo .env:
+Si quieres probar a nivel local, asegúrate de definir las siguientes variables en tu archivo .env:
 
 DB_URL: URL de conexión a la base de datos PostgreSQL.
 DB_USERNAME: Nombre de usuario para acceder a la base de datos.
