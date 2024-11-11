@@ -7,13 +7,13 @@
 	},
 	"item": [
 		{
-			"name": "mutant",
+			"name": "mutant LOCAL",
 			"request": {
 				"method": "POST",
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"dna\": [\r\n        \"ACGAGA\",\r\n        \"CAGTGC\",\r\n        \"GTACGT\",\r\n        \"AGAATG\",\r\n        \"CTCCGA\",\r\n        \"TCACTG\"\r\n    ]\r\n}",
+					"raw": "{\r\n    \"dna\": [\r\n        \"ATGCGT\",\r\n        \"CAGTGA\",\r\n        \"TTATGT\",\r\n        \"TTAGGT\",\r\n        \"CAGAAC\",\r\n        \"ATGTCA\"\r\n    ]\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -21,12 +21,12 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:8082/meli/mutant/",
+					"raw": "http://localhost:8080/meli/mutant/",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
-					"port": "8082",
+					"port": "8080",
 					"path": [
 						"meli",
 						"mutant",
@@ -37,20 +37,74 @@
 			"response": []
 		},
 		{
-			"name": "stats",
+			"name": "stats LOCAL",
 			"request": {
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8082/meli/stats",
+					"raw": "http://localhost:8080/meli/stats",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
-					"port": "8082",
+					"port": "8080",
 					"path": [
 						"meli",
 						"stats"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "stats PROD",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://melirepository-production.up.railway.app/meli/stats",
+					"protocol": "https",
+					"host": [
+						"melirepository-production",
+						"up",
+						"railway",
+						"app"
+					],
+					"path": [
+						"meli",
+						"stats"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "mutant PROD",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"dna\": [\r\n        \"ATGCGA\",\r\n        \"CAGTGC\",\r\n        \"TTATGT\",\r\n        \"TTATGT\",\r\n        \"CAGTGC\",\r\n        \"ATGCGA\"\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://melirepository-production.up.railway.app/meli/mutant/",
+					"protocol": "https",
+					"host": [
+						"melirepository-production",
+						"up",
+						"railway",
+						"app"
+					],
+					"path": [
+						"meli",
+						"mutant",
+						""
 					]
 				}
 			},
